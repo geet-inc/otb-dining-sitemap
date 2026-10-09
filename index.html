@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>サイトマップ｜OTB DINING ブランドサイト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#111;--ink-2:#555;--line:#ddd;--cms:#29A9E0;--bg:#fff;
+    --font:"Noto Sans JP","Hiragino Sans","Yu Gothic UI",-apple-system,system-ui,sans-serif;
+    --col-w:336px;--row-gap:34px;--trunk:44px;--cols:3;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-feature-settings:"palt";-webkit-font-smoothing:antialiased}
+  .canvas{padding:56px 80px 96px;min-width:calc(var(--col-w) * var(--cols) + 400px)}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px}
+  h1{font-size:28px;font-weight:500;letter-spacing:.02em;margin:0}
+  .meta{font-size:11px;color:var(--ink-2);margin-top:10px}
+  .legend{display:flex;gap:26px;font-size:12px;color:var(--ink-2);align-items:center}
+  .legend span{display:inline-flex;align-items:center;gap:8px}
+  .key{width:44px;height:22px;border:1px solid var(--ink);background:#fff}
+  .key.cms{border:2px solid var(--cms)}
+  .heads{display:grid;grid-template-columns:repeat(var(--cols),var(--col-w));padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:40px;font-size:13px;color:var(--ink-2)}
+  .map{position:relative}
+  .connectors{position:absolute;top:0;left:0;overflow:visible;pointer-events:none}
+  .connectors path{stroke:var(--ink);stroke-width:1;fill:none;stroke-linejoin:round}
+  .tn{display:flex;align-items:flex-start}
+  .tn + .tn{margin-top:var(--row-gap)}
+  .col{width:var(--col-w);flex:none}
+  .kids{display:flex;flex-direction:column}
+  .cell{display:flex;align-items:flex-start;gap:12px;width:max-content}
+  .pg{display:flex;flex-direction:column;align-items:flex-start}
+  .box{position:relative;display:inline-block;border:1px solid var(--ink);background:#fff;padding:5px 12px 6px;font-size:20px;line-height:1.35;white-space:nowrap}
+  .box.is-cms{border:2px solid var(--cms);padding:4px 11px 5px}
+  .note{font-size:11px;line-height:1.5;color:var(--ink);padding-top:7px;max-width:220px}
+  .note.below{padding-top:6px;max-width:calc(var(--col-w) - 24px)}
+  .url{font-family:var(--font);font-size:10px;color:var(--ink-2);margin-top:10px;letter-spacing:.01em}
+  .summary{margin-top:96px;max-width:760px}
+  .summary h2{font-size:16px;font-weight:500;margin:0 0 12px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}
+  th{font-weight:500;color:var(--ink-2);font-size:11px}
+  .num{text-align:right;width:80px}
+  tr.total td{font-weight:500;border-bottom:none}
+  @media print{.canvas{padding:0}.summary{page-break-inside:avoid}}
+  @page{size:A3 landscape;margin:14mm}
+</style>
+</head>
+<body>
+<div class="canvas">
+  <header class="head">
+    <div><h1>サイトマップ</h1><div class="meta">OTB DINING ブランドサイト</div></div>
+    <div class="legend"><span><i class="key"></i>通常ページ</span><span><i class="key cms"></i>CMSページ</span></div>
+  </header>
+  <div class="heads"><div>第1階層</div><div>第2階層</div><div>第3階層</div></div>
+  <div class="map">
+    <svg class="connectors" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0.5 L8,4 L0,7.5 Z" fill="#111"/></marker></defs>
+      <g id="lines"></g>
+    </svg>
+    <div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box" id="n-1">トップページ</div><div class="url">/</div></div></div><div class="note below">店舗CMSから入口を表示</div></div><div class="kids"><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box is-cms" id="n-2" data-parent="n-1">店舗詳細</div><div class="url">/restaurant/{slug}</div></div><span class="note">テンプレート1点<br>店舗の追加はCMSで<br>初期登録は2店舗</span></div></div><div class="kids"></div></div><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box is-cms" id="n-3" data-parent="n-1">NEWS 一覧</div><div class="url">/news</div></div></div><div class="note below">掲載先を全体・店舗から選択</div></div><div class="kids"><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box is-cms" id="n-4" data-parent="n-3">NEWS 詳細</div><div class="url">/news/{slug}</div></div><span class="note">テンプレート1点。掲載件数に応じて増えます</span></div></div><div class="kids"></div></div></div></div><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box is-cms" id="n-5" data-parent="n-1">RECRUIT</div><div class="url">/recruit</div></div><span class="note">募集要項を内包</span></div></div><div class="kids"></div></div><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box" id="n-6" data-parent="n-1">ENTRY</div><div class="url">/entry</div></div><span class="note">CONTACTと同レイアウト</span></div></div><div class="kids"></div></div><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box" id="n-7" data-parent="n-1">CONTACT</div><div class="url">/contact</div></div><span class="note">対象店舗・種別を選択</span></div></div><div class="kids"></div></div><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box" id="n-8" data-parent="n-1">送信完了</div><div class="url">/thanks</div></div><span class="note">CONTACT・ENTRY共用</span></div></div><div class="kids"></div></div><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box" id="n-9" data-parent="n-1">プライバシーポリシー</div><div class="url">/privacy</div></div></div></div><div class="kids"></div></div><div class="tn"><div class="col"><div class="cell"><div class="pg"><div class="box" id="n-10" data-parent="n-1">404</div><div class="url">/404</div></div></div></div><div class="kids"></div></div></div></div>
+  </div>
+  
+</div>
+<script>
+  // 親の右辺 → 縦の幹（親の右 + trunk）→ 子の左辺（矢印）
+  var R = 8, TRUNK = 44;
+  function draw() {
+    var map = document.querySelector('.map'), svg = map.querySelector('.connectors'), g = svg.querySelector('#lines');
+    // 子を持つページの備考（URL の下）は、右を通るコネクタの幹に重ならない幅に収める
+    map.querySelectorAll('.note.below').forEach(function (n) {
+      var box = n.parentNode.querySelector('.box');
+      if (box) n.style.maxWidth = Math.max(box.offsetWidth + TRUNK - 12, 120) + 'px';
+    });
+    while (g.firstChild) g.removeChild(g.firstChild);
+    var m = map.getBoundingClientRect();
+    svg.setAttribute('width', m.width); svg.setAttribute('height', m.height);
+    svg.setAttribute('viewBox', '0 0 ' + m.width + ' ' + m.height);
+    map.querySelectorAll('[data-parent]').forEach(function (c) {
+      var p = document.getElementById(c.getAttribute('data-parent'));
+      if (!p) return;
+      var pr = p.getBoundingClientRect(), cr = c.getBoundingClientRect();
+      var x1 = pr.right - m.left, y1 = pr.top + pr.height / 2 - m.top;
+      var x2 = cr.left - m.left, y2 = cr.top + cr.height / 2 - m.top;
+      var tx = x1 + TRUNK, d;
+      if (Math.abs(y2 - y1) < 1) { d = 'M' + x1 + ' ' + y1 + ' H' + x2; }
+      else {
+        var s = y2 > y1 ? 1 : -1, r = Math.min(R, Math.abs(y2 - y1) / 2);
+        d = 'M' + x1 + ' ' + y1 + ' H' + (tx - r) + ' Q' + tx + ' ' + y1 + ' ' + tx + ' ' + (y1 + r * s) +
+            ' V' + (y2 - r * s) + ' Q' + tx + ' ' + y2 + ' ' + (tx + r) + ' ' + y2 + ' H' + x2;
+      }
+      var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', d); path.setAttribute('marker-end', 'url(#arrow)');
+      g.appendChild(path);
+    });
+  }
+  window.addEventListener('load', draw); window.addEventListener('resize', draw);
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(draw); }
+</script>
+</body>
+</html>
